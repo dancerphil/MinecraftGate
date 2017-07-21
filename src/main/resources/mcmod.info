@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "minecraftgate",
+  "name": "Minecraft Gate",
+  "description": "A mod to build gate circuit.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["dancerphil"],
+  "credits": "This is credits, and i dont know its meaning.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
