@@ -1,13 +1,12 @@
-package minecraftgate.mbe01_block_simple;
+package minecraftbyexample.mbe01_block_simple;
 
 import net.minecraft.item.ItemBlock;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class StartupCommon
 {
-  public static BlockSimple blockSimple;  // this holds the unique instance of your block
-  public static ItemBlock itemBlockSimple;  // this holds the unique instance of the ItemBlock corresponding to your block
+  public static BlockSimple blockSimple;
+  public static ItemBlock itemBlockSimple;
 
   public static void preInitCommon()
   {
@@ -20,7 +19,6 @@ public class StartupCommon
     itemBlockSimple.setRegistryName(blockSimple.getRegistryName());
     ForgeRegistries.ITEMS.register(itemBlockSimple);
 
-    System.out.println("fuck!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! i am done.");
   }
 
   public static void initCommon()

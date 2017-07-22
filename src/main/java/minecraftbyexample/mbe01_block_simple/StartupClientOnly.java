@@ -1,4 +1,4 @@
-package minecraftgate.mbe01_block_simple;
+package minecraftbyexample.mbe01_block_simple;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
