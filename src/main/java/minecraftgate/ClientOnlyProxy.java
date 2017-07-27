@@ -2,8 +2,10 @@ package minecraftgate;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraftforge.client.model.ModelLoader;
 
 public class ClientOnlyProxy extends Proxy
 {
@@ -11,23 +13,25 @@ public class ClientOnlyProxy extends Proxy
   public void preInit()
   {
     super.preInit();
-    minecraftgate.simple.StartupClientOnly.preInitClientOnly();
-    minecraftgate.not_gate.StartupClientOnly.preInitClientOnly();
+    ModelResourceLocation itemModelResourceLocation;
+    final int DEFAULT_ITEM_SUBTYPE = 0;
+
+    itemModelResourceLocation = new ModelResourceLocation("minecraftgate:simple", "inventory");
+    ModelLoader.setCustomModelResourceLocation(Proxy.itemBlockSimple, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
+
+    itemModelResourceLocation = new ModelResourceLocation("minecraftgate:not_gate", "inventory");
+    ModelLoader.setCustomModelResourceLocation(Proxy.itemBlockNotGate, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
 
   }
 
   public void init()
   {
     super.init();
-    minecraftgate.simple.StartupClientOnly.initClientOnly();
-    minecraftgate.not_gate.StartupClientOnly.initClientOnly();
   }
 
   public void postInit()
   {
     super.postInit();
-    minecraftgate.simple.StartupClientOnly.postInitClientOnly();
-    minecraftgate.not_gate.StartupClientOnly.postInitClientOnly();
   }
 
   @Override

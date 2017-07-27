@@ -1,35 +1,46 @@
 package minecraftgate;
 
+import minecraftgate.simple.BlockSimple;
+import minecraftgate.not_gate.BlockNotGate;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemBlock;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public abstract class Proxy {
+  public static BlockSimple blockSimple;
+  public static ItemBlock itemBlockSimple;
+  public static BlockNotGate blockNotGate;
+  public static ItemBlock itemBlockNotGate;
 
   public void preInit()
   {
-    minecraftgate.simple.StartupCommon.preInitCommon();
-    minecraftgate.not_gate.StartupCommon.preInitCommon();
+    blockSimple = (BlockSimple)(new BlockSimple().setUnlocalizedName("simple"));
+    blockSimple.setRegistryName("simple_registry_name");
+    ForgeRegistries.BLOCKS.register(blockSimple);
+
+    itemBlockSimple = new ItemBlock(blockSimple);
+    itemBlockSimple.setRegistryName(blockSimple.getRegistryName());
+    ForgeRegistries.ITEMS.register(itemBlockSimple);
+
+    blockNotGate = (BlockNotGate)(new BlockNotGate().setUnlocalizedName("not_gate"));
+    blockNotGate.setRegistryName("not_gate_registry_name");
+    ForgeRegistries.BLOCKS.register(blockNotGate);
+
+    itemBlockNotGate = new ItemBlock(blockNotGate);
+    itemBlockNotGate.setRegistryName(blockNotGate.getRegistryName());
+    ForgeRegistries.ITEMS.register(itemBlockNotGate);
   }
 
   public void init()
   {
-    minecraftgate.simple.StartupCommon.initCommon();
-    minecraftgate.not_gate.StartupCommon.initCommon();
   }
 
   public void postInit()
   {
-    minecraftgate.simple.StartupCommon.postInitCommon();
-    minecraftgate.not_gate.StartupCommon.postInitCommon();
   }
 
-  // helper to determine whether the given player is in creative mode
-  //  not necessary for most examples
   abstract public boolean playerIsInCreativeMode(EntityPlayer player);
 
-  /**
-   * is this a dedicated server?
-   * @return true if this is a dedicated server, false otherwise
-   */
   abstract public boolean isDedicatedServer();
 
 }
