@@ -7,16 +7,19 @@ public abstract class Proxy {
   public void preInit()
   {
     minecraftgate.simple.StartupCommon.preInitCommon();
+    minecraftgate.not_gate.StartupCommon.preInitCommon();
   }
 
   public void init()
   {
     minecraftgate.simple.StartupCommon.initCommon();
+    minecraftgate.not_gate.StartupCommon.initCommon();
   }
 
   public void postInit()
   {
     minecraftgate.simple.StartupCommon.postInitCommon();
+    minecraftgate.not_gate.StartupCommon.postInitCommon();
   }
 
   // helper to determine whether the given player is in creative mode

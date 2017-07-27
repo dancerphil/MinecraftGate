@@ -12,18 +12,22 @@ public class ClientOnlyProxy extends Proxy
   {
     super.preInit();
     minecraftgate.simple.StartupClientOnly.preInitClientOnly();
+    minecraftgate.not_gate.StartupClientOnly.preInitClientOnly();
+
   }
 
   public void init()
   {
     super.init();
     minecraftgate.simple.StartupClientOnly.initClientOnly();
+    minecraftgate.not_gate.StartupClientOnly.initClientOnly();
   }
 
   public void postInit()
   {
     super.postInit();
     minecraftgate.simple.StartupClientOnly.postInitClientOnly();
+    minecraftgate.not_gate.StartupClientOnly.postInitClientOnly();
   }
 
   @Override
