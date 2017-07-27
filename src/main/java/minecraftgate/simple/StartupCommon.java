@@ -1,4 +1,4 @@
-package minecraftgate.mbe01_block_simple;
+package minecraftgate.simple;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
@@ -10,8 +10,8 @@ public class StartupCommon
 
   public static void preInitCommon()
   {
-    blockSimple = (BlockSimple)(new BlockSimple().setUnlocalizedName("mbe01_block_simple_unlocalised_name"));
-    blockSimple.setRegistryName("mbe01_block_simple_registry_name");
+    blockSimple = (BlockSimple)(new BlockSimple().setUnlocalizedName("simple_unlocalised_name"));
+    blockSimple.setRegistryName("simple_registry_name");
     ForgeRegistries.BLOCKS.register(blockSimple);
 
     // We also need to create and register an ItemBlock for this block otherwise it won't appear in the inventory

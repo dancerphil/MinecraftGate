@@ -1,4 +1,4 @@
-package minecraftgate.mbe01_block_simple;
+package minecraftgate.simple;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

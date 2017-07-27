@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "minecraftgate:simple_model" }
+    }
+}

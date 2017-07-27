@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "minecraftgate:blocks/simple_0",
+        "up": "minecraftgate:blocks/simple_1",
+        "north": "minecraftgate:blocks/simple_2",
+        "east": "minecraftgate:blocks/simple_5",
+        "south": "minecraftgate:blocks/simple_3",
+        "west": "minecraftgate:blocks/simple_4",
+        "particle": "blocks/lapis_block"
+    }
+}
