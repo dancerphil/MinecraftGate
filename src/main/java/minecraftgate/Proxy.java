@@ -12,8 +12,7 @@ public abstract class Proxy {
   public static BlockNotGate blockNotGate;
   public static ItemBlock itemBlockNotGate;
 
-  public void preInit()
-  {
+  public void preInit() {
     blockSimple = (BlockSimple)(new BlockSimple().setUnlocalizedName("simple"));
     blockSimple.setRegistryName("simple_registry_name");
     ForgeRegistries.BLOCKS.register(blockSimple);
@@ -31,12 +30,10 @@ public abstract class Proxy {
     ForgeRegistries.ITEMS.register(itemBlockNotGate);
   }
 
-  public void init()
-  {
+  public void init() {
   }
 
-  public void postInit()
-  {
+  public void postInit() {
   }
 
   abstract public boolean playerIsInCreativeMode(EntityPlayer player);

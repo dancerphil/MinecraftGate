@@ -7,6 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -18,6 +19,7 @@ public class BlockNotGate extends Block {
         super(Material.ROCK);
         this.setCreativeTab(CreativeTabs.REDSTONE);
     }
+
     @Override
     public boolean canProvidePower(IBlockState iBlockState)
     {
@@ -39,8 +41,7 @@ public class BlockNotGate extends Block {
 
     // When the block is broken, you may need to notify neighbours.
     @Override
-    public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
-    {
+    public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
         final boolean CASCADE_UPDATE = false;  // not sure
         // except for calls by World.setBlockState()
         worldIn.notifyNeighborsOfStateChange(pos, this, CASCADE_UPDATE);
@@ -55,18 +56,22 @@ public class BlockNotGate extends Block {
 
     @Override
     public boolean isOpaqueCube(IBlockState iBlockState) {
-        //TODO
         return true;
     }
 
     @Override
     public boolean isFullCube(IBlockState iBlockState) {
-        //TODO
         return true;
     }
 
     @Override
     public EnumBlockRenderType getRenderType(IBlockState iBlockState) {
         return EnumBlockRenderType.MODEL;
+    }
+
+    // by returning a null collision bounding box we stop the player from colliding with it
+    @Override
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+        return NULL_AABB;
     }
 }

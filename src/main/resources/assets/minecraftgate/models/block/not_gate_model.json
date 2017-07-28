@@ -1,0 +1,39 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "not_gate": "minecraftgate:blocks/not_gate",
+        "base": "blocks/stone",
+        "particle": "blocks/lapis_block"
+    },
+    "elements": [{
+        "from": [ 0, 0, 0 ],
+        "to": [ 16, 2, 16 ],
+        "shade": false,
+        "faces": {
+            "down": {
+                "uv": [0, 0, 16, 16],
+                "texture": "#base"
+            },
+            "up": {
+                "uv": [0, 0, 16, 16],
+                "texture": "#not_gate"
+            },
+            "east": {
+                "uv": [16, 0, 0, 2],
+                "texture": "#base"
+            },
+            "west": {
+                "uv": [0, 0, 16, 2],
+                "texture": "#base"
+            },
+            "north": {
+                "uv": [16, 0, 0, 2],
+                "texture": "#base"
+            },
+            "south": {
+                "uv": [0, 0, 16, 2],
+                "texture": "#base"
+            }
+        }
+    }]
+}

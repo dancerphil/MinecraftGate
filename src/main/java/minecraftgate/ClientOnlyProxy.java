@@ -10,8 +10,7 @@ import net.minecraftforge.client.model.ModelLoader;
 public class ClientOnlyProxy extends Proxy
 {
 
-  public void preInit()
-  {
+  public void preInit() {
     super.preInit();
     ModelResourceLocation itemModelResourceLocation;
     final int DEFAULT_ITEM_SUBTYPE = 0;

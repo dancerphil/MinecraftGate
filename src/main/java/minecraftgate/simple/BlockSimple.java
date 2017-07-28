@@ -11,8 +11,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockSimple extends Block
 {
-  public BlockSimple()
-  {
+  public BlockSimple() {
     super(Material.ROCK);
     this.setCreativeTab(CreativeTabs.REDSTONE);
   }
