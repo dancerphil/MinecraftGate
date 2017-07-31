@@ -3,7 +3,8 @@
     "textures": {
         "not_gate": "minecraftgate:blocks/not_gate",
         "base": "blocks/stone",
-        "particle": "blocks/lapis_block"
+        "particle": "blocks/lapis_block",
+        "pole": "blocks/stone"
     },
     "elements": [{
         "from": [ 0, 0, 0 ],

@@ -56,12 +56,12 @@ public class BlockNotGate extends Block {
 
     @Override
     public boolean isOpaqueCube(IBlockState iBlockState) {
-        return true;
+        return false;
     }
 
     @Override
     public boolean isFullCube(IBlockState iBlockState) {
-        return true;
+        return false;
     }
 
     @Override
